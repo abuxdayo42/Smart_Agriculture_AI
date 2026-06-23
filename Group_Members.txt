@@ -1,0 +1,26 @@
+**ARTIFICIAL INTELLIGENCE LAB PROJECT**
+
+# Group Members
+
+**Submitted To:**
+**Sayed Haider Imam Jaffery**
+
+| S. No. | Student Name         | Roll Number    |
+| ------ | -------------------- | -------------- |
+| 1      | Allah Bux            | FA23-BSCS-0132 |
+| 2      | Hoorain Mazhar       | FA23-BSCS-0055 |
+| 3      | Hasnain Ahmed Ansari | FA23-BSCS-0134 |
+| 4      | Rao Muhammad Aman    | FA23-BSCS-0151 |
+| 5      | Hamza Nisar          | FA23-BSCS-0163 |
+
+---
+
+**Course:** Artificial Intelligence Lab
+**Project:** Smart Agriculture AI System
+**Submission Date:** 25 June 2026
+
+We hereby certify that all the above-mentioned students are members of this project group and have contributed to the completion of this Artificial Intelligence Lab project.
+
+**Submitted By:**
+**Allah Bux**
+FA23-BSCS-0132

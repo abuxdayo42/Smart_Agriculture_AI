@@ -1,0 +1,79 @@
+/* Main Background */
+.stApp {
+    background: linear-gradient(135deg, #0B1120, #111827);
+    color: white;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    color: white !important;
+}
+
+/* Hero Title */
+.hero-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    color: #00C896;
+}
+
+.hero-sub {
+    text-align: center;
+    font-size: 22px;
+    color: #D1D5DB;
+}
+
+/* Cards */
+.metric-card {
+    background: #1F2937;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+
+.metric-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00C896;
+}
+
+.metric-label {
+    color: white;
+    font-size: 18px;
+}
+
+/* Buttons */
+.stButton button {
+    background: #00C896;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.stButton button:hover {
+    background: #0099FF;
+}
+
+/* Inputs */
+.stTextInput,
+.stNumberInput,
+.stSelectbox {
+    border-radius: 10px;
+}
+
+/* Result Card */
+.result-card {
+    background: #111827;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #00C896;
+}

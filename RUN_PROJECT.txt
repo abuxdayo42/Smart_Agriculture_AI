@@ -1,0 +1,30 @@
+1. Open Terminal / PowerShell
+
+2. Go to Project Folder
+
+cd Smart_Agriculture_AI
+
+3. Create Virtual Environment
+
+python -m venv venv
+
+4. Activate Virtual Environment
+
+Windows:
+venv\Scripts\activate
+
+Linux / macOS:
+source venv/bin/activate
+
+5. Install Required Libraries
+
+pip install -r requirements.txt
+
+6. Run the Streamlit Application
+
+streamlit run app.py
+
+7. Open the URL shown in the terminal
+
+Example:
+http://localhost:8501
