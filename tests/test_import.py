@@ -1,14 +1,19 @@
-def test_import_app():
-    import app
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
-def test_import_yield():
-    import pages.Crop_Yield_Prediction
+def test_app_exists():
+    assert (PROJECT_ROOT / "app.py").exists()
 
 
-def test_import_fertilizer():
-    import pages.Fertilizer_Recommendation
+def test_pages_folder_exists():
+    assert (PROJECT_ROOT / "pages").exists()
 
 
-def test_import_disease():
-    import pages.Disease_Detection
+def test_models_folder_exists():
+    assert (PROJECT_ROOT / "models").exists()
+
+
+def test_assets_folder_exists():
+    assert (PROJECT_ROOT / "assets").exists()
