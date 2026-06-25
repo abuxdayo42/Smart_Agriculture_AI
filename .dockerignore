@@ -1,0 +1,15 @@
+venv/
+.git/
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.ipynb
+
+models/
+
+README.md
+
+Group_Members.txt
+RUN_PROJECT.txt
+Start.txt

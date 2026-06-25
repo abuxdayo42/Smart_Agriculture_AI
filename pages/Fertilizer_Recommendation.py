@@ -1,6 +1,4 @@
 import streamlit as st
-import numpy as np
-import joblib
 
 st.set_page_config(
     page_title="Fertilizer Recommendation",
@@ -14,22 +12,6 @@ with open("assets/style.css") as f:
         unsafe_allow_html=True
     )
 
-crop_encoder = joblib.load(
-    "models/Fertilizer/fertilizer_crop_encoder.pkl"
-)
-
-soil_encoder = joblib.load(
-    "models/Fertilizer/fertilizer_soil_encoder.pkl"
-)
-
-fert_encoder = joblib.load(
-    "models/Fertilizer/fertilizer_encoder.pkl"
-)
-
-model = joblib.load(
-    "models/Fertilizer/fertilizer_model.pkl"
-)
-
 st.title("🌱 Fertilizer Recommendation")
 
 st.image(
@@ -37,90 +19,50 @@ st.image(
     use_container_width=True
 )
 
-st.write(
-    "Get smart fertilizer suggestions using AI."
+st.markdown("---")
+
+st.info("""
+### 🚀 DevOps Demonstration Version
+
+This page demonstrates the Fertilizer
+Recommendation interface.
+
+The trained Machine Learning model has been
+removed to reduce Docker image size.
+
+The complete AI version remains available in the
+original project.
+""")
+
+st.markdown("---")
+
+c1, c2, c3 = st.columns(3)
+
+with c1:
+    st.metric("Reliability", "98%")
+
+with c2:
+    st.metric("Docker", "Ready")
+
+with c3:
+    st.metric("CI/CD", "Ready")
+
+st.markdown("---")
+
+st.subheader("Original Features")
+
+st.write("""
+✔ Soil Analysis
+
+✔ Nutrient Analysis
+
+✔ Crop Selection
+
+✔ AI Recommendation
+
+✔ Smart Fertilizer Suggestion
+""")
+
+st.warning(
+    "Recommendation functionality is disabled in the Docker Demonstration version."
 )
-
-left, right = st.columns(2)
-
-with left:
-
-    crop = st.selectbox(
-        "🌾 Crop Type",
-        crop_encoder.classes_
-    )
-
-    soil = st.selectbox(
-        "🌱 Soil Type",
-        soil_encoder.classes_
-    )
-
-    temperature = st.number_input(
-        "Temperature"
-    )
-
-    humidity = st.number_input(
-        "Humidity"
-    )
-
-with right:
-
-    moisture = st.number_input(
-        "Moisture"
-    )
-
-    N = st.number_input(
-        "Nitrogen"
-    )
-
-    P = st.number_input(
-        "Phosphorus"
-    )
-
-    K = st.number_input(
-        "Potassium"
-    )
-
-if st.button(
-    "🚀 Recommend Fertilizer"
-):
-
-    crop_val = crop_encoder.transform(
-        [crop]
-    )[0]
-
-    soil_val = soil_encoder.transform(
-        [soil]
-    )[0]
-
-    features = np.array([
-        [
-            temperature,
-            humidity,
-            moisture,
-            soil_val,
-            crop_val,
-            N,
-            K,
-            P
-        ]
-    ])
-
-    prediction = model.predict(
-        features
-    )[0]
-
-    fertilizer = fert_encoder.inverse_transform(
-        [prediction]
-    )[0]
-
-    st.markdown(
-        f"""
-        <div class='result-card'>
-        <h2>🌱 Recommended Fertilizer</h2>
-        <h1>{fertilizer}</h1>
-        <p>Recommendation Reliability: 98%</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )

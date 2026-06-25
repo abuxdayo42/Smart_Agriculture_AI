@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+
+  smart-agriculture-app:
+
+    image: smart-agriculture-ai:v1
+
+    container_name: smart-agri-compose
+
+    ports:
+      - "8501:8501"
+
+    restart: unless-stopped
