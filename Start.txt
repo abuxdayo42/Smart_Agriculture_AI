@@ -1,2 +1,43 @@
+
+docker --version
+docker compose version
+docker info
+
+docker images    --> Shows docker images
+docker ps -a     --> Shows docker containers
+
+docker compose up -d  -->Run using Docker Compose
+docker ps             -->Check Running Containers
+docker compose logs   -->Show logs
+docker compose down   -->Stop the Project
+
+
+docker rmi smart-agriculture-ai:v1    -->Delete a Docker Image
+docker rm smart-agri-compose          -->Delete a Docker Container
+docker stop smart-agri-compose        -->Stop the Docker Container
+
+docker container prune -->Delete all stopped containers
+docker image prune    -->Delete all unused images
+docker system prune -a -->Delete everything
+
+
+docker build -t smart-agriculture-ai:v1 . build an image
+docker run -d -p 8501:8501 --name smart-agri-container smart-agriculture-ai:v1 --> run the docker container
+
 venv\Scripts\activate
 python -m streamlit run app.py
+
+
+Task	                       Command
+Show images	                    docker images
+Show running containers	        docker ps
+Show all containers	            docker ps -a
+Build image	                    docker build -t smart-agriculture-ai:v1 .
+Run with Docker	                docker run -d -p 8501:8501 --name smart-agri-container smart-agriculture-ai:v1
+Run with Compose	            docker compose up -d
+Show logs	                    docker compose logs
+Stop Compose	                docker compose down
+Stop container	                docker stop smart-agri-container
+Remove container	            docker rm smart-agri-container
+Remove image	                docker rmi smart-agriculture-ai:v1
+Remove everything unused	    docker system prune -a
