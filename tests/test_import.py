@@ -4,7 +4,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_app_exists():
-    assert (PROJECT_ROOT / "app123.py").exists()
+    assert (PROJECT_ROOT / "app.py").exists()
 
 
 def test_pages_folder_exists():
