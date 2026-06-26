@@ -1,5 +1,6 @@
 import streamlit as st
 
+if
 st.set_page_config(
     page_title="Smart Agriculture AI",
     page_icon="🌱",
